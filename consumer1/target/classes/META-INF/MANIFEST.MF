@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Lenovo
+Build-Jdk: 14.0.1
+Implementation-Title: consumer1
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.bookshopapp
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/consumer1
+Created-By: Maven Integration for Eclipse
+

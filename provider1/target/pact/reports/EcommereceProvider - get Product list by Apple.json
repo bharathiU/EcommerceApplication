@@ -1,0 +1,57 @@
+{
+    "metaData": {
+        "date": "2020-07-10T14:42:37+0000",
+        "pactJvmVersion": "3.5.11",
+        "reportFormat": "0.0.0"
+    },
+    "provider": {
+        "name": "EcommereceProvider"
+    },
+    "execution": [
+        {
+            "consumer": {
+                "name": "consumerpact4"
+            },
+            "interactions": [
+                {
+                    "interaction": {
+                        "description": "get Product list by Apple",
+                        "request": {
+                            "method": "GET",
+                            "path": "/app/manufacturers/name/Apple"
+                        },
+                        "response": {
+                            "status": 200,
+                            "body": {
+                                "manufacturerVOs": [
+                                    {
+                                        "manufacturerAddress": "Bangalore",
+                                        "manufacturerId": "5678",
+                                        "manufacturerName": "Apple",
+                                        "productsList": [
+                                            {
+                                                "price": 90000.0,
+                                                "productId": "1007",
+                                                "productName": "Apple Mack book Pro",
+                                                "productType": "Laptop"
+                                            },
+                                            {
+                                                "price": 75000.0,
+                                                "productId": "1008",
+                                                "productName": "mack book Air",
+                                                "productType": "Laptop"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "verification": {
+                        "result": "OK"
+                    }
+                }
+            ]
+        }
+    ]
+}

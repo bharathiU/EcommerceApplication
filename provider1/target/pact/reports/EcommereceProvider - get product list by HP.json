@@ -1,0 +1,72 @@
+{
+    "metaData": {
+        "date": "2020-07-10T14:40:33+0000",
+        "pactJvmVersion": "3.5.11",
+        "reportFormat": "0.0.0"
+    },
+    "provider": {
+        "name": "EcommereceProvider"
+    },
+    "execution": [
+        {
+            "consumer": {
+                "name": "consumerpact4"
+            },
+            "interactions": [
+                {
+                    "interaction": {
+                        "description": "get product list by HP",
+                        "request": {
+                            "method": "GET",
+                            "path": "/app/manufacturers/name/HP"
+                        },
+                        "response": {
+                            "status": 200,
+                            "body": {
+                                "manufacturerVOs": [
+                                    {
+                                        "manufacturerAddress": "Mumbai",
+                                        "manufacturerId": "5679",
+                                        "manufacturerName": "HP",
+                                        "productsList": [
+                                            {
+                                                "price": 83000.0,
+                                                "productId": "1009",
+                                                "productName": "pro book",
+                                                "productType": "Laptop"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "providerStates": [
+                            {
+                                "name": "HP"
+                            }
+                        ]
+                    },
+                    "verification": {
+                        "result": "failed",
+                        "body": {
+                            "comparison": {
+                                "$.manufacturerVOs.0.manufacturerName": [
+                                    {
+                                        "mismatch": "Expected 'HP' but received 'Hp'",
+                                        "diff": ""
+                                    }
+                                ]
+                            },
+                            "diff": [
+                                "            \"manufacturerId\": \"5679\",",
+                                "-            \"manufacturerName\": \"HP\",",
+                                "+            \"manufacturerName\": \"Hp\",",
+                                "            \"productsList\": ["
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
